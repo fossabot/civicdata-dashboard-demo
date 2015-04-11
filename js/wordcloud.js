@@ -1,6 +1,6 @@
-var resourceId = "30f2a56f-b7bd-4ac7-8e24-5276344dd20d";
+var resourceId = "03b30af0-1ef8-4b6c-bc59-859fd8e19e5c";
 //var baseURI = "http://www.civicdata.com/api/action/datastore_search_sql?sql=";
-var baseURI = "http://civicdataprod1.cloudapp.net/api/action/datastore_search_sql?sql=";
+var baseURI = "http://www.civicdata.com/api/action/datastore_search_sql?sql=";
 
 // Helper function to make request for JSONP.
 function requestJSON(url, callback) {
