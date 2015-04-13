@@ -93,6 +93,14 @@ $(document).ready(function() {
     appliedByDayByType.forEach(function(d) {
       var dArray = d.key.split("-");
       datesArray.push(dArray[1] + "-" + dArray[2]);
+
+      bldAdded = false;
+      demoAdded = false;
+      eleAdded = false;
+      otherAdded = false;
+      mechAdded = false;
+      plmAdded = false;
+
       d.values.forEach(function(i) {
         
         if (i.key == "Building") {
@@ -130,16 +138,11 @@ $(document).ready(function() {
         ele.push(0);
       if (!mechAdded)
         mech.push(0);
+      if (!otherAdded)
+        other.push(0);
       if (!plmAdded)
         plm.push(0);
-
-      bldAdded = false;
-      demoAdded = false;
-      eleAdded = false;
-      otherAdded = false;
-      mechAdded = false;
-      plmAdded = false;
-       
+  
     });
 
     var chart = c3.generate({
@@ -171,7 +174,7 @@ $(document).ready(function() {
 
     setTimeout(function () {
       chart.groups([['Building','Demolition','Electrical','Other','Mechanical','Plumbing']])
-    }, 2000);
+    }, 1000);
 
     /********************************************************************************/
     /* Calculated permits applied for by day and by type (END)
