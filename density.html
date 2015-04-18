@@ -12,6 +12,7 @@
     <title>Deschutes Co Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
@@ -78,9 +79,6 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-building fa-fw"></i> Zillow</a>
-                        </li>
-                        <li>
                             <a href="about.html"><i class="fa fa-info-circle fa-fw"></i> About</a>
                         </li>
                     </ul>
@@ -93,14 +91,11 @@
 
         <!-- Page Content -->
         <div id="page-wrapper">
-            <!-- /.row -->
+            <!-- /.row https://sethaxthelm.cartodb.com/api/v2/viz/d3230050-dfa7-11e4-b329-0e018d66dc29/viz.json -->
             <div class="row">
                 <div id="map" style="height:100vh;">
-                  <iframe width='100%' style="height:100vh;" frameborder='0' src='https://sethaxthelm.cartodb.com/viz/17fc8244-dfa0-11e4-b23e-0e4fddd5de28/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
                 </div>
             </div>
-            <br/>
-            <br/>
         </div>
     </div> <!-- /container -->
         
@@ -108,11 +103,39 @@
 
     <!-- /#wrapper -->
     <script src="js/jquery.js"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.1/moment.min.js"></script>
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
     <script src="js/sb-admin-2.js"></script>
+
+    <script>
+      function main() {
+
+
+        cartodb.createVis('map', 'https://sethaxthelm.cartodb.com/api/v2/viz/17fc8244-dfa0-11e4-b23e-0e4fddd5de28/viz.json', {//'https://sethaxthelm.cartodb.com/api/v2/viz/d3230050-dfa7-11e4-b329-0e018d66dc29/viz.json', {
+          title: true,
+          description: true, 
+          shareable: false, 
+          search: false, 
+          zoomControl: true, 
+          loaderControl: true, 
+          layer_selector: true, 
+          fullscreen: false,
+          //tiles_loader: true,
+          center_lat: 43.9100,
+          center_lon: -121.2200,
+          zoom: 10
+        })
+        .done(function(vis, layers) {
+          // layer 0 is the base layer, layer 1 is cartodb layer
+
+        })
+        .error(function(err) {
+          console.log(err);
+        });
+      }
+      window.onload = main;
+    </script>
 
 </body>
 
