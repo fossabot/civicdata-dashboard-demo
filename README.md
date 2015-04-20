@@ -15,4 +15,4 @@ Deschutes County, OR on [CivicData.com](http://www.civicdata.com/en/organization
 * [CartoDB](http://cartodb.com/): Easily create amazing maps.
 * [WordCloud2](http://timdream.org/wordcloud2.js/): Generate a word cloud on 2D canvas or html.
 * [Start Bootstrap - SB Admin 2 Theme](http://startbootstrap.com/template-overviews/sb-admin-2/): An incredible bootstrap dashboard theme.
-* [Moment](http://momentjs.com/): Parse, validate, manipulate, and display dates in JavaScript.
+* [Moment.js](http://momentjs.com/): Parse, validate, manipulate, and display dates in JavaScript.
