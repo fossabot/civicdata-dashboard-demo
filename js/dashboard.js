@@ -1,4 +1,4 @@
-var permitsResourceId = "2ee2ca8f-d75a-486c-a192-2e2f76b1235b";
+var permitsResourceId = "daf7b829-0650-4cf5-bc25-2dd23001eec8";
 var inspectionsResourceId = "f40902f2-3f3e-4aa2-9326-0f88d6d07ae4";
 var baseURI = "http://www.civicdata.com/api/action/datastore_search_sql?sql=";
 var startDate = moment().subtract(30, 'd').format("YYYY-MM-DD");
@@ -24,7 +24,7 @@ $(document).ready(function() {
   /* Get all activity in last 30 days (START)
   /********************************************************************************/
 
-  var urlLast30Query = "SELECT \"PermitNum\",\"AppliedDate\",\"IssuedDate\",\"EstProjectCostDEC\",\"PermitType\",\"PermitTypeMapped\",\"Link\",\"OriginalAddress1\" from \"permitsResourceId\" where \"LastUpdated\" > \'" + startDate + "' order by \"AppliedDate\"";
+  var urlLast30Query = "SELECT \"PermitNum\",\"AppliedDate\",\"IssuedDate\",\"EstProjectCostDEC\",\"PermitType\",\"PermitTypeMapped\",\"Link\",\"OriginalAddress1\" from \"permitsResourceId\" where \"StatusDate\" > \'" + startDate + "' order by \"AppliedDate\"";
   var urlLast30 = baseURI + encodeURIComponent(urlLast30Query.replace("permitsResourceId", permitsResourceId));
 
   requestJSON(urlLast30, function(json) {
