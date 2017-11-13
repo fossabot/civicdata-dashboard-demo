@@ -1,4 +1,6 @@
 ## Deschutes County, OR - CivicData.com Examples
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcjcross%2Fcivicdata-dashboard-demo.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcjcross%2Fcivicdata-dashboard-demo?ref=badge_shield)
+
 
 Sample visualization of data queries from CivicData.com.
 
@@ -16,3 +18,7 @@ Deschutes County, OR on [CivicData.com](http://www.civicdata.com/en/organization
 * [WordCloud2](http://timdream.org/wordcloud2.js/): Generate a word cloud on 2D canvas or html.
 * [Start Bootstrap - SB Admin 2 Theme](http://startbootstrap.com/template-overviews/sb-admin-2/): An incredible bootstrap dashboard theme.
 * [Moment.js](http://momentjs.com/): Parse, validate, manipulate, and display dates in JavaScript.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcjcross%2Fcivicdata-dashboard-demo.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcjcross%2Fcivicdata-dashboard-demo?ref=badge_large)
